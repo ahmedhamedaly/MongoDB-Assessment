@@ -61,3 +61,18 @@ cat test_files/sample.json | python flattener.py
 ```
 
 ## Tests
+
+I tested my `flatten` method using Pythons `unittest` by testing a selection of `test_files` that could possible cause problems with my method.
+
+* **empty.json** is an empty json object.
+* **flattened.json** is an already flattened json object.
+* **nested.json** has multiple nested objects.
+* **sample.json** is the sample question provided.
+
+The above test cases I feel cover all the possible problems that could occur with my program from a valid json file input.
+
+To test the available test files,
+
+``` shell
+python /tests/test_flattener.py
+```
