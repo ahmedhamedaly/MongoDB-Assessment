@@ -1,6 +1,8 @@
 import json
 import sys
 
+from util.pretty_json import pretty_json
+
 
 def flatten(json, flat={}, prefix=''):
     for key, value in json.items():
@@ -14,6 +16,6 @@ def flatten(json, flat={}, prefix=''):
     return flat
 
 
-with open('./test_files/sample.json', 'r') as f:
+with open('./test_files/test.json', 'r') as f:
     json_file = json.load(f)
-    print(flatten(json_file))
+    print(pretty_json(flatten(json_file)))
