@@ -16,7 +16,12 @@ def flatten(json, flat={}, prefix=''):
     return flat
 
 
-json_file = json.load(sys.stdin)
-flatten = flatten(json_file)
+def main():
+    json_file = json.load(sys.stdin)
+    flat_json = flatten(json_file)
 
-print(pretty_json(flatten))
+    print(pretty_json(flat_json))
+
+
+if __name__ == "__main__":
+    main()
