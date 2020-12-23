@@ -3,13 +3,13 @@ import json
 
 def flatten(json, flat={}, prefix=''):
     for key, value in json.items():
-        pf_k = (prefix + '.' + key) if prefix else key
+        prefix_key = (prefix + '.' + key) if prefix else key
 
         if type(value) is dict:
-            flatten(value, flat, pf_k)
+            flatten(value, flat, prefix_key)
         else:
-            flat[pf_k] = value
-    
+            flat[prefix_key] = value
+
     return flat
 
 
