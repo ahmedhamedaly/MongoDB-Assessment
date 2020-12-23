@@ -76,3 +76,15 @@ To test the available test files,
 ``` shell
 python /tests/test_flattener.py
 ```
+
+## Time Spent
+
+* Project Setup: `5 minutes`
+* Flatten Method: `30 minutes`
+* STDIN / Error correction: `10 minutes`
+* Test Class / Files: `35 minutes`
+* Testing Script: `15 minutes`
+* Bug Fixes / Utils: `15 minutes`
+* README Markdown: `40 minutes`
+
+Approximately: `2 hours and 30 minutes`
