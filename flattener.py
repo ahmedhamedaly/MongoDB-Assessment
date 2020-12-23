@@ -16,6 +16,7 @@ def flatten(json, flat={}, prefix=''):
     return flat
 
 
-with open('./test_files/test.json', 'r') as f:
-    json_file = json.load(f)
-    print(pretty_json(flatten(json_file)))
+json_file = json.load(sys.stdin)
+flatten = flatten(json_file)
+
+print(pretty_json(flatten))
