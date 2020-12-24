@@ -14,7 +14,7 @@ class Test_Flatten(unittest.TestCase):
         
         print('\nTesting Empty json -> Flatten')
         print(f'Expected: {expected}\nActual: {actual}\n')
-        self.assertEqual(expected, actual)
+        self.assertEqual(expected, actual, 'Expected is different than the actual')
 
 
     def test_flattened(self):
@@ -23,7 +23,7 @@ class Test_Flatten(unittest.TestCase):
         
         print('\nTesting Flattened json -> Flatten')
         print(f'Expected: {expected}\nActual: {actual}\n')
-        self.assertEqual(expected, actual)
+        self.assertEqual(expected, actual, 'Expected is different than the actual')
 
 
     def test_nested(self):
@@ -32,8 +32,8 @@ class Test_Flatten(unittest.TestCase):
         
         print('\nTesting Nested json -> Flatten')
         print(f'Expected: {expected}\nActual: {actual}\n')
-        self.assertEqual(expected, actual)
-    
+        self.assertEqual(expected, actual, 'Expected is different than the actual')
+
 
     def test_sample(self):
         expected = {"a":1,"b":True,"c.d":3,"c.e":"test"}
@@ -41,8 +41,8 @@ class Test_Flatten(unittest.TestCase):
         
         print('\nTesting Sample json -> Flatten')
         print(f'Expected: {expected}\nActual: {actual}\n')
-        self.assertEqual(expected, actual)
-    
+        self.assertEqual(expected, actual, 'Expected is different than the actual')
+
 
 def compute_actual(file_name):
     with open(f'./test_files/{file_name}') as f:
