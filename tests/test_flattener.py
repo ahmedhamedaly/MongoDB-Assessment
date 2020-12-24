@@ -7,7 +7,24 @@ import flattener as flt
 
 
 class Test_Flatten(unittest.TestCase):
+    '''
+    A selection of tests designed to test edge cases / possible problems that could arise from the script. Below is the list of files tests:
 
+    - empty.json is an empty json object.
+    - flattened.json is an already flattened json object.
+    - nested.json has multiple nested objects.
+    - no_object.json has an empty object in the main json object
+    - sample.json is the sample question provided.
+
+        Args:
+            unittest: The test library I decided to use.
+
+        Raises:
+            Exception: Expected was different to actual
+
+        Returns:
+            N/A
+    '''
     def test_empty(self):
         expected = {}
         actual = compute_actual('empty.json')
@@ -54,6 +71,15 @@ class Test_Flatten(unittest.TestCase):
 
 
 def compute_actual(file_name):
+    '''
+    Computes the actual flattened version of the json file name inputted.
+
+        Args:
+            file_name (str): The name of file to open and flatten.
+
+        Returns:
+            json_object: Flattened version of the input json file name.
+    '''
     with open(f'./test_files/{file_name}') as f:
         unflattened = json.load(f)
     
