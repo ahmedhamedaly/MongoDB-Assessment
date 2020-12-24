@@ -78,12 +78,6 @@ To test the available test files,
 python /tests/test_flattener.py
 ```
 
-## Performance
-
-The `Time Complexity` of the `flatten` method in `flattener.py` is `O(N)`. It goes through all keys of the json object once.
-
-The `Space Complexity` of the `flatten` method in `flattener.py` is `O(N)`. It saves the entire json object to another variable.
-
 ## Time Spent
 
 * Project Setup: `5 minutes`
