@@ -35,6 +35,15 @@ class Test_Flatten(unittest.TestCase):
         self.assertEqual(expected, actual, 'Expected is different than the actual')
 
 
+    def test_no_object(self):
+        expected = {"a": 1, "b": True}
+        actual = compute_actual('no_object.json')
+        
+        print('\nTesting No Object json -> Flatten')
+        print(f'Expected: {expected}\nActual: {actual}\n')
+        self.assertEqual(expected, actual, 'Expected is different than the actual')
+
+
     def test_sample(self):
         expected = {"a":1,"b":True,"c.d":3,"c.e":"test"}
         actual = compute_actual('sample.json')
