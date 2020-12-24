@@ -67,6 +67,7 @@ I tested my `flatten` method using Pythons `unittest` by testing a selection of 
 * **empty.json** is an empty json object.
 * **flattened.json** is an already flattened json object.
 * **nested.json** has multiple nested objects.
+* **no_object.json** has an empty object in the main json object
 * **sample.json** is the sample question provided.
 
 The above test cases I feel cover all the possible problems that could occur with my program from a valid json file input.
